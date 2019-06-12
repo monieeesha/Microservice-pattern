@@ -4,6 +4,7 @@ import com.stackroute.domain.User;
 import com.stackroute.exceptions.UserAlreadyExistsExceptions;
 
 import java.util.List;
+//interface for the user-services
 
 public interface UserService {
 

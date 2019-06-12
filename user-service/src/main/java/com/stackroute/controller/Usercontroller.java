@@ -3,19 +3,21 @@ package com.stackroute.controller;
 import com.stackroute.domain.User;
 import com.stackroute.exceptions.UserAlreadyExistsExceptions;
 import com.stackroute.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Enabled Controller to handle request and response for trackservice
 @RestController
 @RequestMapping("api/v1")
 public class Usercontroller {
 
    private  UserService userService;
 
-
+    @Autowired
     public Usercontroller(UserService userService)
     {
         this.userService=userService;

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+//Enabled user class with lombok
 @Entity
 @Data
 @NoArgsConstructor

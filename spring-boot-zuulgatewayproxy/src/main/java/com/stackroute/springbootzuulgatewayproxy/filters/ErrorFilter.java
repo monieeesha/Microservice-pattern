@@ -1,6 +1,7 @@
 package com.stackroute.springbootzuulgatewayproxy.filters;
 
 import com.netflix.zuul.ZuulFilter;
+// ErrorFilters are invoked when an error occurs while handling the request.
 
 public class ErrorFilter extends ZuulFilter {
 

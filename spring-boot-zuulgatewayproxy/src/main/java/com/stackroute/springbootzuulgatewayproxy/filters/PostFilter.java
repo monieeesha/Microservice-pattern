@@ -2,6 +2,7 @@ package com.stackroute.springbootzuulgatewayproxy.filters;
 
 import com.netflix.zuul.ZuulFilter;
 
+//Postfilter are invoked after the request has been routed.
 public class PostFilter extends ZuulFilter {
 
     @Override

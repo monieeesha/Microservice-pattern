@@ -4,6 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
 
+
+//enabled config server to provide configuration properties for clientservices
 @EnableConfigServer
 @SpringBootApplication
 public class SpringConfigServerApplication {

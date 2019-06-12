@@ -13,6 +13,7 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+//enabled swagger to provide document for Rest API for RESTful webservices
 @EnableSwagger2
 @PropertySource("classpath:config.properties")
 @ComponentScan(basePackageClasses = TrackController.class)

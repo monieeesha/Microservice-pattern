@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import javax.sound.midi.Track;
 import java.util.List;
 
+//Enabled repository use built in methods
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer>
 {

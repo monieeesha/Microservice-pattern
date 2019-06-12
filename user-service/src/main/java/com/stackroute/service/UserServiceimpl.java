@@ -10,10 +10,12 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 @Primary
+
+//implemented userservice interface
 public class UserServiceimpl implements UserService {
 
 
-   private UserRepository userRepository;
+    private UserRepository userRepository;
 
     @Autowired
     public  UserServiceimpl(UserRepository userRepository)

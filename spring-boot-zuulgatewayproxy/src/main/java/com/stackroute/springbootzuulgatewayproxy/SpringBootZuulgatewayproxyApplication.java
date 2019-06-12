@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.Bean;
 
+//Enabled the services provided by zuulserver
 @EnableZuulProxy
 @SpringBootApplication
 public class SpringBootZuulgatewayproxyApplication {

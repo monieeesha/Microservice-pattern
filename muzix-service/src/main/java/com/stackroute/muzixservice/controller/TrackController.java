@@ -16,16 +16,17 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+//Enabled Controller to handle request and response for trackservice
 @RestController
 @RequestMapping("api/v1")
 @Api(value="TrackControllerAPI:",produces= MediaType.APPLICATION_JSON_VALUE)
 public class TrackController {
 
 
-    @Autowired
+
     private TrackService trackservice;
 
-
+    @Autowired
     public TrackController(TrackService trackservice)
     {
         this.trackservice=trackservice;
@@ -47,8 +48,7 @@ public class TrackController {
     public ResponseEntity<?> getAllTracks()
     {
 
-
-          return new ResponseEntity<List<Track>>(trackservice.getAllTracks(), HttpStatus.OK);
+        return new ResponseEntity<List<Track>>(trackservice.getAllTracks(), HttpStatus.OK);
 
     }
     @PutMapping("track/{id}/{comment}")

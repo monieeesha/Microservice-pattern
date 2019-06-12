@@ -9,13 +9,20 @@ import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
 
+//Enabled Applicationlistener to prefill the database
 @Component
 public class ApplicationListenerDemo implements ApplicationListener<ContextRefreshedEvent> {
     Track track=new Track();
     @Autowired
     TrackRepository trackRepository;
-    @Autowired
+
     private Environment environment;
+
+    @Autowired
+    public ApplicationListenerDemo(Environment environment) {
+        this.environment = environment;
+    }
+
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent)
     {

@@ -1,7 +1,7 @@
 package com.stackroute.springbootzuulgatewayproxy.filters;
 
 import com.netflix.zuul.ZuulFilter;
-
+// RouteFilter are used to route the request.
 public class RouteFilter extends ZuulFilter {
 
     @Override

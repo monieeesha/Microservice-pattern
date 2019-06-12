@@ -5,6 +5,8 @@ import com.netflix.zuul.context.RequestContext;
 
 import javax.servlet.http.HttpServletRequest;
 
+
+// Prefilters are invoked before the request is routed.
 public class PreFilter extends ZuulFilter {
 
 
