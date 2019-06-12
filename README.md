@@ -1,6 +1,7 @@
 implemented with
 -->docker-compose
 -->multi module
+  added the parent pom with common dependencies
 -->api gateway(zuul service)
 intercept all the request then route the request to actual services.
 -->eureka server
