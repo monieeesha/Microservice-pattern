@@ -22,7 +22,9 @@ public class ExceptionController {
         return new ResponseEntity<String>(exception1.getMessage(), HttpStatus.NOT_FOUND);
     }
 
-
-
-
+    @ExceptionHandler(value= TrackEmptyExceptions.class)
+    public ResponseEntity<String> TrackEmptyExceptions(TrackEmptyExceptions exception2)
+    {
+        return new ResponseEntity<String>(exception2.getMessage(), HttpStatus.NOT_FOUND);
+    }
 }

@@ -2,6 +2,7 @@ package com.stackroute.muzixservice.service;
 
 import com.stackroute.muzixservice.domain.Track;
 import com.stackroute.muzixservice.exceptions.TrackAlreadyExistsExceptions;
+import com.stackroute.muzixservice.exceptions.TrackEmptyExceptions;
 import com.stackroute.muzixservice.exceptions.TrackNotFoundExceptions;
 import com.stackroute.muzixservice.repository.TrackRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,7 +63,8 @@ public class TrackServiceimpl implements TrackService {
 
     @Cacheable(value="track")
     @Override
-    public List<Track> getAllTracks(){
+    public List<Track> getAllTracks()throws TrackEmptyExceptions
+    {
 
          simulateDelay();
          List<Track>  tracklist=(List<Track>) trackRepository.findAll();

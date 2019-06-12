@@ -1,6 +1,6 @@
 package com.stackroute.muzixservice.exceptions;
 
-//custom exception for Trackalready Exist
+//custom exception if TrackalreadyExists while saving
 public class TrackAlreadyExistsExceptions extends Exception {
 
         private String message;

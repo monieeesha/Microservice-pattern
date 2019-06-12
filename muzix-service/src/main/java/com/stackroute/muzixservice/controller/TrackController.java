@@ -2,6 +2,7 @@ package com.stackroute.muzixservice.controller;
 
 import com.stackroute.muzixservice.domain.Track;
 import com.stackroute.muzixservice.exceptions.TrackAlreadyExistsExceptions;
+import com.stackroute.muzixservice.exceptions.TrackEmptyExceptions;
 import com.stackroute.muzixservice.exceptions.TrackNotFoundExceptions;
 import com.stackroute.muzixservice.service.TrackService;
 import io.swagger.annotations.Api;
@@ -45,11 +46,17 @@ public class TrackController {
     @ApiOperation("gets the track with specific id")
     @ApiResponses(value={@ApiResponse(code=200,message = "ok",response= Track.class)})
     @GetMapping("track")
-    public ResponseEntity<?> getAllTracks()
+    public ResponseEntity<?> getAllTracks()throws TrackEmptyExceptions
     {
+        try
+        {
+            return new ResponseEntity<List<Track>>(trackservice.getAllTracks(), HttpStatus.OK);
+        }
+        catch(TrackEmptyExceptions  trackEmptyExceptions)
+        {
 
-        return new ResponseEntity<List<Track>>(trackservice.getAllTracks(), HttpStatus.OK);
-
+            return  new ResponseEntity<String>("no tracks to show", HttpStatus.NOT_FOUND);
+        }
     }
     @PutMapping("track/{id}/{comment}")
     public ResponseEntity<?> updateTrack(@RequestBody  @PathVariable("id") String id,@PathVariable ("comment") String comment)throws  TrackNotFoundExceptions

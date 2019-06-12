@@ -1,5 +1,5 @@
 package com.stackroute.exceptions;
-// custom exception for user already exsist exeception
+// custom exception if user already exsist
 public class UserAlreadyExistsExceptions extends Exception {
 
     private String message;

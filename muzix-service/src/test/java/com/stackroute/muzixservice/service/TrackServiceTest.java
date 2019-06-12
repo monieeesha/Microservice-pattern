@@ -2,6 +2,7 @@ package com.stackroute.muzixservice.service;
 
 import com.stackroute.muzixservice.domain.Track;
 import com.stackroute.muzixservice.exceptions.TrackAlreadyExistsExceptions;
+import com.stackroute.muzixservice.exceptions.TrackEmptyExceptions;
 import com.stackroute.muzixservice.exceptions.TrackNotFoundExceptions;
 import com.stackroute.muzixservice.repository.TrackRepository;
 import org.junit.After;
@@ -83,7 +84,7 @@ public class TrackServiceTest {
        userService.saveUser(user);*/
     }
     @Test
-    public void getAllTracks(){
+    public void getAllTracks()throws TrackEmptyExceptions {
 
         trackRepository.save(track);
         when(trackRepository.findAll()).thenReturn(list);
